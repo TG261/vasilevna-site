@@ -4,9 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Васильевна — держим микроклимат в порядке</title>
+<title>Васильевна — микроклимат</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -27,7 +30,9 @@ header h1 {
   margin: 15px 0;
 }
 
-header p { color: #d9ebd3; }
+header p {
+  color: #d9ebd3;
+}
 
 main {
   max-width: 1150px;
@@ -43,7 +48,6 @@ main {
 }
 
 iframe {
-  display: block;
   width: 100%;
   height: 75vh;
   min-height: 450px;
@@ -70,14 +74,9 @@ button, .link {
   font-size: 15px;
 }
 
-button:hover, .link:hover {
-  background: #16551e;
-}
-
 .note {
   text-align: center;
   padding: 20px;
-  color: #49644a;
   line-height: 1.6;
 }
 
@@ -95,54 +94,74 @@ footer {
 
 <header>
   <div>🌱 АГРОКОМБИНАТ • ИНФО-БЕЗОПАСНОСТЬ</div>
+
   <h1>Держим свой «микроклимат» в порядке</h1>
-  <p>Как не поддаваться манипуляциям СМИ
-  на примере нашей Васильевны</p>
+
+  <p>
+    Как не поддаваться манипуляциям СМИ
+    на примере нашей Васильевны
+  </p>
 </header>
 
 <main>
+
   <div class="actions">
-    <a class="link" href="slides.pdf" target="_blank">
+
+    <a class="link" href="./slides.pdf" target="_blank">
       Открыть презентацию
     </a>
+
     <button onclick="fullscreen()">
       На весь экран ⛶
     </button>
-    <a class="link" href="slides.pdf" download>
+
+    <a class="link" href="./slides.pdf" download>
       Скачать PDF ↓
     </a>
+
   </div>
 
   <section class="viewer" id="presentation">
+
     <iframe
-      src="slides.pdf#view=FitH"
+      src="./slides.pdf#view=FitH"
       title="Презентация Васильевны">
     </iframe>
+
   </section>
 
   <div class="note">
+
     <h3>👩‍🌾 Совет от Васильевны</h3>
+
     Проверяйте источники, не поддавайтесь эмоциям
     и держите информационный микроклимат в порядке!
+
     <br><br>
+
     Спасибо за внимание, коллеги! Работаем!
+
   </div>
+
 </main>
 
 <footer>
   🌿 АГРОКОМБИНАТ · 2026
-  <br>Здравый смысл — наш главный урожай!
+  <br>
+  Здравый смысл — наш главный урожай!
 </footer>
 
 <script>
 function fullscreen() {
+
   const viewer = document.getElementById('presentation');
 
   if (!document.fullscreenElement) {
-    viewer.requestFullscreen?.();
+    viewer.requestFullscreen();
   } else {
-    document.exitFullscreen?.();
+    document.exitFullscreen();
   }
+
 }
 </script>
 
